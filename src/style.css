@@ -53,3 +53,22 @@ img {
 .navButton {
   font-size: 24px;
 }
+
+footer .wrapper:after {
+  height: 40px;
+}
+
+footer {
+  display: flex;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  justify-content: center;
+  gap: 10px;
+}
+
+.github {
+  height: 16px;
+}

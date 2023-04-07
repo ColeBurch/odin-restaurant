@@ -2,6 +2,7 @@ import "./style.css";
 import printMe from "./print.js";
 import InstagramSVG from "./images/instagram.svg";
 import CoffeeSVG from "./images/coffee.svg";
+import GithubSVG from "./images/github.svg";
 
 function mainBody() {
   const wrapper = document.createElement("div");
@@ -68,13 +69,18 @@ function mainBody() {
 }
 
 function getFooter() {
-  const footer = document.createElement("div");
+  const footer = document.createElement("footer");
 
   const footerText = document.createElement("div");
   footerText.classList.add("footerText");
   footerText.textContent = "Made by Cole Burch";
 
+  const github = new Image();
+  github.src = GithubSVG;
+  github.classList.add("github");
+
   footer.appendChild(footerText);
+  footer.appendChild(github);
 
   return footer;
 }
