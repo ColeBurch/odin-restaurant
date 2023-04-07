@@ -1,19 +1,83 @@
 import "./style.css";
 import printMe from "./print.js";
+import InstagramSVG from "./images/instagram.svg";
+import CoffeeSVG from "./images/coffee.svg";
 
-function component() {
-  const element = document.createElement("div");
-  const btn = document.createElement("button");
+function mainBody() {
+  const wrapper = document.createElement("div");
+  wrapper.classList.add("wrapper");
 
-  element.textContent = "Hello!";
-  element.classList.add("hello");
+  const header = document.createElement("header");
+  header.classList.add("header");
 
-  btn.innerHTML = "Click me and check the console!";
-  btn.onclick = printMe;
+  const container = document.createElement("div");
+  container.classList.add("container");
 
-  element.appendChild(btn);
+  const leftContainer = document.createElement("div");
+  leftContainer.classList.add("leftContainer");
 
-  return element;
+  const coffee = new Image();
+  coffee.src = CoffeeSVG;
+  coffee.classList.add("coffee");
+
+  const logo = document.createElement("h1");
+  logo.classList.add("logo");
+  logo.textContent = "Burch Coffee Co.";
+
+  const instagram = new Image();
+  instagram.src = InstagramSVG;
+  instagram.classList.add("instagram");
+
+  leftContainer.appendChild(coffee);
+  leftContainer.appendChild(logo);
+
+  container.appendChild(leftContainer);
+  container.appendChild(instagram);
+
+  header.appendChild(container);
+  wrapper.appendChild(header);
+
+  const navButtonsContainer = document.createElement("div");
+  navButtonsContainer.classList.add("navButtonsContainer");
+
+  const home = document.createElement("div");
+  home.classList.add("navButton");
+  home.textContent = "home";
+  home.addEventListener("click", printMe);
+
+  const menu = document.createElement("div");
+  menu.classList.add("navButton");
+  menu.textContent = "menu";
+
+  const about = document.createElement("div");
+  about.classList.add("navButton");
+  about.textContent = "about";
+
+  navButtonsContainer.appendChild(home);
+  navButtonsContainer.appendChild(menu);
+  navButtonsContainer.appendChild(about);
+
+  wrapper.appendChild(navButtonsContainer);
+
+  const contentBox = document.createElement("div");
+  contentBox.classList.add("contentBox");
+
+  wrapper.appendChild(contentBox);
+
+  return wrapper;
 }
 
-document.body.appendChild(component());
+function getFooter() {
+  const footer = document.createElement("div");
+
+  const footerText = document.createElement("div");
+  footerText.classList.add("footerText");
+  footerText.textContent = "Made by Cole Burch";
+
+  footer.appendChild(footerText);
+
+  return footer;
+}
+
+document.body.appendChild(mainBody());
+document.body.appendChild(getFooter());
