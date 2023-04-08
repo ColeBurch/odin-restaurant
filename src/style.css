@@ -72,3 +72,25 @@ footer {
 .github {
   height: 16px;
 }
+
+.contentBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.headerLine {
+  font-size: 40px;
+}
+
+.subtext {
+  font-size: 40px;
+}
+
+.heroShot {
+  height: 200px;
+  width: auto;
+  border-radius: 30px;
+}

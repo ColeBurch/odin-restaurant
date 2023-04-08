@@ -1,5 +1,5 @@
 import "./style.css";
-import printMe from "./print.js";
+import homeScreen from "./homeScreen.js";
 import InstagramSVG from "./images/instagram.svg";
 import CoffeeSVG from "./images/coffee.svg";
 import GithubSVG from "./images/github.svg";
@@ -44,7 +44,7 @@ function mainBody() {
   const home = document.createElement("div");
   home.classList.add("navButton");
   home.textContent = "home";
-  home.addEventListener("click", printMe);
+  home.addEventListener("click", homeScreen);
 
   const menu = document.createElement("div");
   menu.classList.add("navButton");
