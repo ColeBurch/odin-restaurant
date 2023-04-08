@@ -1,4 +1,4 @@
-import coffeePourSVG from "./images/coffeePour.jpg";
+import coffeePourJPG from "./images/coffeePour.jpg";
 
 export default function homeScreen() {
   const contentBox = document.querySelector(".contentBox");
@@ -14,7 +14,7 @@ export default function homeScreen() {
   subtext.textContent = "Handmade by the best Barista's";
 
   const heroShot = new Image();
-  heroShot.src = coffeePourSVG;
+  heroShot.src = coffeePourJPG;
   heroShot.classList.add("heroShot");
 
   contentBox.appendChild(headerLine);

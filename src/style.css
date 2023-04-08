@@ -94,3 +94,7 @@ footer {
   width: auto;
   border-radius: 30px;
 }
+
+.menuItem {
+  font-size: 24px;
+}
