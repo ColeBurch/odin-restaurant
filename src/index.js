@@ -1,6 +1,7 @@
 import "./style.css";
 import homeScreen from "./homeScreen.js";
 import menuScreen from "./menuScreen.js";
+import aboutScreen from "./aboutScreen.js";
 import InstagramSVG from "./images/instagram.svg";
 import CoffeeSVG from "./images/coffee.svg";
 import GithubSVG from "./images/github.svg";
@@ -55,6 +56,7 @@ function mainBody() {
   const about = document.createElement("div");
   about.classList.add("navButton");
   about.textContent = "about";
+  about.addEventListener("click", aboutScreen);
 
   navButtonsContainer.appendChild(home);
   navButtonsContainer.appendChild(menu);
