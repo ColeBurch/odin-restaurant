@@ -87,3 +87,4 @@ function getFooter() {
 
 document.body.appendChild(mainBody());
 document.body.appendChild(getFooter());
+homeScreen();
